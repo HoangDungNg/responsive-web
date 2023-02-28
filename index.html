@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--UI resources-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.3.0/css/all.min.css"
+      integrity="sha512-UJqci0ZyYcQ0AOJkcIkUCxLS2L6eNcOr7ZiypuInvEhO9uqIDi349MEFrqBzoy1QlfcjfURHl+WTMjEdWcv67A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="css/utilities.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!--JavaScript resources-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>Smart Slider</title>
+  </head>
+  <body>
+    <!--Root Container-->
+    <div class="container-fluid root-container px-0">
+      <!--my header-->
+      <div class="my-header">
+        <div class="my-container">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+              <a href="#" class="navbar-brand disabled" tabindex="-1"
+                ><img src="images/logo.png"
+              /></a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar"
+                aria-controls="offcanvasDarkNavbar"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="offcanvas offcanvas-start w-75 text-bg-dark bg-dark"
+                tabindex="-1"
+                id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel"
+              >
+                <div class="offcanvas-header">
+                  <h3 class="offcanvas-title" id="offcanvasDarkNavbarLabel">
+                    Menu
+                  </h3>
+                  <button
+                    type="button"
+                    class="btn-close btn-close-white"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul
+                    class="navbar-nav justify-content-start ms-lg-5 gap-lg-4 flex-grow-1 pe-3"
+                  >
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#"
+                        >Home</a
+                      >
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Product</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Services</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Blog</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+
+      <!--Hero section-->
+      <section class="hero-section">
+        <div class="my-container">
+          <div
+            id="carouselExampleIndicators"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="false"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="images/carousel1.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+                <div class="carousel-caption">
+                  <h1>Smart <span class="bold">Slider 3</span></h1>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="images/carousel2.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="images/carousel3.jpg"
+                  class="d-block w-100"
+                  alt="..."
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Advertising section-->
+      <section class="advertising">
+        <div class="my-container">
+          <!-- 16:9 aspect ratio -->
+          <div class="embed-responsive embed-responsive-21by9">
+            <iframe
+              class="embed-responsive-item"
+              src="https://www.youtube.com/embed/bxFcmg0jsbE"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!--Customer App-->
+      <section class="customer-app">
+        <div class="my-container my-grid">
+          <div class="img-container left-img">
+            <img src="images/double-iphone.png" alt="" class="img-fluid" />
+          </div>
+
+          <div class="img-text">
+            <h3 class="img-text-title bold">Apps for Customer</h3>
+            <p class="description">
+              The general idea behind "diviversification" is to provide a
+              Service ecosystem that fully caters to all customer needs from the
+              smallest needs.
+            </p>
+            <div class="button-collection">
+              <img src="images/google-play.png" alt="" />
+              <img src="images/appstore.png" alt="" />
+            </div>
+            <div class="see-more">
+              <a href="#" class="img-text-link"
+                >See more
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="link-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Outstanding section-->
+      <section class="outstanding">
+        <div class="my-container my-grid">
+          <div class="outstanding-title-container">
+            <h3 class="bold">Outstanding features of the Client App</h3>
+          </div>
+          <div class="img-container">
+            <img
+              src="images/iPhone-12-mini.png"
+              alt=""
+              class="img-fluid single-iphone"
+            />
+          </div>
+
+          <div class="outstanding-details">
+            <div>
+              <ul>
+                <li>
+                  <div>
+                    <p class="text-md bold">
+                      Search service in just one button
+                    </p>
+                    <p class="description">Enjoy convenience in just one app</p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <p class="text-md bold">Connecting diverse information</p>
+                    <p class="description">
+                      Not only chat now you can voice chat and make calls to
+                      quickly connect with the performer
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <p class="text-md bold">Update status service</p>
+                    <p class="description">
+                      You can know the status of repair or work completed while
+                      away from home
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <p class="text-md bold">
+                      Complete safe and quality service
+                    </p>
+                    <p class="description">
+                      You will feel secure when you see the report image and
+                      easily evaluate quality service whenever
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Business App-->
+      <section class="business-app">
+        <div class="my-container my-grid">
+          <div class="img-text">
+            <h3 class="img-text-title bold">Apps for Businesss</h3>
+            <p class="description">
+              One of the advantages of Multi-Industry Services is that it helps
+              reduce the impact of unexpected fluctuations in any one industry.
+              Bringing diverse consumers to businesses.
+            </p>
+            <div class="button-collection">
+              <img src="images/google-play.png" alt="" />
+              <img src="images/appstore.png" alt="" />
+            </div>
+            <div class="see-more">
+              <a href="#" class="img-text-link"
+                >See more
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="link-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="img-container">
+            <img src="images/double-iphone.png" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </section>
+
+      <!--Manager App-->
+      <section class="manager-app">
+        <div class="my-container my-grid">
+          <div class="img-container mac">
+            <img src="images/macbook.png" alt="" class="img-fluid" />
+          </div>
+
+          <div class="img-text">
+            <h3 class="img-text-title bold">Apps for Managers</h3>
+            <p class="description">
+              Each branch of service provides is independent of the other
+              business areas, but the activities of the srevices will be
+              reported to senior management of the company that owns the
+              application.
+            </p>
+            <div class="button-collection">
+              <img src="images/google-play.png" alt="" />
+              <img src="images/appstore.png" alt="" />
+            </div>
+            <div class="see-more">
+              <a href="#" class="img-text-link"
+                >See more
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="link-icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--About section-->
+      <section class="about">
+        <div class="my-container my-grid">
+          <div class="about-text">
+            <div class="inner-about">
+              <h3 class="bold">Why choose Us</h3>
+              <p class="description">
+                Modern consumer trends: Focus on top-selected services. Changing
+                business models to adapt new consumer trends: Applying the
+                lastest technology
+              </p>
+            </div>
+          </div>
+          <div class="card-placeholder">
+            <div class="card-container">
+              <div class="card">
+                <img src="images/icons/professional.png" alt="" />
+                <p class="d-inline-block bold">Professional</p>
+              </div>
+
+              <div class="card">
+                <img src="images/icons/fast.png" alt="" />
+                <p class="d-inline-block bold">Fast</p>
+              </div>
+
+              <div class="card">
+                <img src="images/icons/multi.png" alt="" />
+                <p class="d-inline-block bold">Multi service</p>
+              </div>
+
+              <div class="card">
+                <img src="images/icons/safety.png" alt="" />
+                <p class="d-inline-block bold">Safety, quality</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Learn more section-->
+      <section class="learn-more">
+        <div class="my-container">
+          <div class="row">
+            <div class="col-6">
+              <h3 class="mb-3 bold">Learn more about the service</h3>
+            </div>
+            <div class="col-6 text-right">
+              <div class="controls-container">
+                <a
+                  class="btn btn-primary mb-3 mr-1 left-carousel-btn disabled btn-secondary"
+                  data-bs-target="#card-carousel"
+                  role="button"
+                  data-bs-slide="prev"
+                >
+                  <i class="fa fa-arrow-left"></i>
+                </a>
+                <a
+                  class="btn btn-primary mb-3 right-carousel-btn"
+                  data-bs-target="#card-carousel"
+                  role="button"
+                  data-bs-slide="next"
+                >
+                  <i class="fa fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="col-12">
+              <div
+                id="card-carousel"
+                class="carousel slide"
+                data-bs-ride="carousel"
+                data-bs-interval="false"
+              >
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#card-carousel"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#card-carousel"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#card-carousel"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <!--First carousel item-->
+                  <div class="carousel-item active">
+                    <div class="card-container">
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/icons/cleaning.png"
+                        />
+                        <div class="card-body">
+                          <p class="bold">Cleaning</p>
+                          <p class="text-sm">
+                            Hiện đại và uy tín. Tạo không gian sống sạch đẹp
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/icons/appliances.png"
+                        />
+                        <div class="card-body">
+                          <p class="bold">Appliances</p>
+                          <p class="text-sm">Experience...</p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/icons/household.png"
+                        />
+                        <div class="card-body">
+                          <p class="bold">Household</p>
+                          <p class="text-sm">Experience...</p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/icons/electronic.png"
+                        />
+                        <div class="card-body">
+                          <p class="bold">Electronic</p>
+                          <p class="text-sm">Experience...</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Second carousel item-->
+                  <div class="carousel-item">
+                    <div class="card-container">
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/icons/cleaning.png"
+                        />
+                        <div class="card-body">
+                          <p class="bold">Cleaning</p>
+                          <p class="text-sm">
+                            Hiện đại và uy tín. Tạo không gian sống sạch đẹp
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/icons/appliances.png"
+                        />
+                        <div class="card-body">
+                          <p class="bold">Appliances</p>
+                          <p class="text-sm">Experience...</p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/icons/household.png"
+                        />
+                        <div class="card-body">
+                          <p class="bold">Household</p>
+                          <p class="text-sm">Experience...</p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/icons/electronic.png"
+                        />
+                        <div class="card-body">
+                          <p class="bold">Electronic</p>
+                          <p class="text-sm">Experience...</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!--Third carousel item-->
+                  <div class="carousel-item">
+                    <div class="card-container">
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/icons/cleaning.png"
+                        />
+                        <div class="card-body">
+                          <p class="bold">Cleaning</p>
+                          <p class="text-sm">
+                            Hiện đại và uy tín. Tạo không gian sống sạch đẹp
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/icons/appliances.png"
+                        />
+                        <div class="card-body">
+                          <p class="bold">Appliances</p>
+                          <p class="text-sm">Experience...</p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/icons/household.png"
+                        />
+                        <div class="card-body">
+                          <p class="bold">Household</p>
+                          <p class="text-sm">Experience...</p>
+                        </div>
+                      </div>
+
+                      <div class="card">
+                        <img
+                          class="img-fluid"
+                          alt="100%x280"
+                          src="images/icons/electronic.png"
+                        />
+                        <div class="card-body">
+                          <p class="bold">Electronic</p>
+                          <p class="text-sm">Experience...</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Top Business section-->
+      <section class="top-business about">
+        <div class="my-container my-grid">
+          <div class="about-text">
+            <div class="inner-about">
+              <h3 class="bold">Top businesses</h3>
+              <p class="description">
+                Accompanying the application is indispensable for businesses
+                that play a great role and contribute to the ecosystem. The same
+                goal becomes the spearhead in some areas.
+              </p>
+            </div>
+          </div>
+          <div class="card-placeholder">
+            <div class="card-container">
+              <div class="card">
+                <img src="images/top-business1.png" alt="" class="img-fluid" />
+              </div>
+
+              <div class="card">
+                <img src="images/top-business2.png" alt="" class="img-fluid" />
+              </div>
+
+              <div class="card">
+                <img src="images/top-business3.png" alt="" class="img-fluid" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Feedback section-->
+      <section class="feedback about">
+        <div class="my-container my-grid">
+          <div class="about-text">
+            <div class="inner-about">
+              <h3 class="bold">Business feedback</h3>
+              <p class="description">
+                Sharing from associates experience with iService
+              </p>
+            </div>
+          </div>
+          <div class="card-placeholder">
+            <div class="card-container">
+              <div class="card">
+                <div class="feedback-profile">
+                  <img src="images/profile1.png" alt="" class="img-fluid" />
+                  <div class="profile-text">
+                    <p class="bold text-md">John K.</p>
+                    <span>La pasteria</span>
+                  </div>
+                </div>
+                <div class="feedback-rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+                <div class="feedback-description">
+                  <p class="description">
+                    The reports and orders for each service are very specific.
+                    Is an application worth sustainable cooperation.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="feedback-profile">
+                  <img src="images/profile2.png" alt="" class="img-fluid" />
+                  <div class="profile-text">
+                    <p class="bold text-md">Esther Howard</p>
+                    <span>La pasteria</span>
+                  </div>
+                </div>
+                <div class="feedback-rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+                <div class="feedback-description">
+                  <p class="description">
+                    The reports and orders for each service are very specific.
+                    Is an application worth sustainable cooperation.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="feedback-profile">
+                  <img src="images/profile3.png" alt="" class="img-fluid" />
+                  <div class="profile-text">
+                    <p class="bold text-md">Robert Fox</p>
+                    <span>La pasteria</span>
+                  </div>
+                </div>
+                <div class="feedback-rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+                <div class="feedback-description">
+                  <p class="description">
+                    The reports and orders for each service are very specific.
+                    Is an application worth sustainable cooperation.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Contact section-->
+      <section class="contact">
+        <div class="my-container my-grid">
+          <div class="contact-form mx-auto">
+            <div class="row">
+              <div class="contact-text col-6 p-5">
+                <h3>Contact us</h3>
+                <p class="description">
+                  Please connect with us for answer and service experience
+                  completely and completely
+                </p>
+              </div>
+
+              <div class="col-6 input-group-lg d-flex h-75 align-self-center">
+                <input
+                  type="text"
+                  class="form-control d-inline-block w-75"
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  class="btn btn-primary d-inline-block"
+                  type="button"
+                  id="button-addon2"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer bg-dark py-5 px-5">
+        <div class="my-container my-grid">
+          <div class="brand">
+            <h1 class="bold">Brandname</h1>
+            <p>Follow us:</p>
+            <div class="social">
+              <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+              <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+              <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            </div>
+          </div>
+
+          <div class="mini-nav">
+            <div class="row">
+              <div class="col-3">
+                <p class="bold text-md">Home</p>
+                <ul>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Intro</a></li>
+                  <li><a href="#">Features</a></li>
+                  <li><a href="#">Pricing</a></li>
+                </ul>
+              </div>
+
+              <div class="col-3">
+                <p class="bold text-md">Suppor</p>
+                <ul>
+                  <li><a href="#">Shipping & Returns</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Our Partners</a></li>
+                </ul>
+              </div>
+
+              <div class="col-3">
+                <p class="bold text-md">Resources</p>
+                <ul>
+                  <li><a href="#">Our Work</a></li>
+                  <li><a href="#">Services</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+
+              <div class="col-3">
+                <p class="bold text-md">Contact Us</p>
+                <ul>
+                  <li><a href="#">About us</a></li>
+                  <li><a href="#">Menu</a></li>
+                  <li><a href="#">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="copyright">
+            <p>(c) 2023 - Delicious, All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+      <!--Closing root container-->
+    </div>
+
+    <!--Bootstrap bundle min CSS-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
